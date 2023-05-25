@@ -3,7 +3,6 @@ matplotlib==3.5.1
 numpy==1.24.2
 pandas==1.4.4
 Pillow==9.5.0
-Pillow==9.5.0
 plotly==5.11.0
 pmdarima==2.0.3
 pymongo==4.3.3
