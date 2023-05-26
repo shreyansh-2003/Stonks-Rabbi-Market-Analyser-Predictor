@@ -70,7 +70,7 @@ name_option_sb = st.selectbox('**COMPANY LISTING NAME**', name_options, key='sel
 
 data_symbol = json_tickers_copy[json_tickers_copy["Name"]==name_option_sb]['Symbol'].values[0]
 st.markdown("**COMPANY LISTING SYMBOL: **")
-st.write(data_symbol
+st.write(data_symbol)
 
 # Option Selectbox (2) (Auto-Filled) --> Company Listed Symbol
 #PyMongo : ---> data_symbol = [data['Symbol'] for data in collection.find({'Name': name_option_sb}, {'Symbol': 1})]
