@@ -11,9 +11,9 @@ from htbuilder.funcs import rgba, rgb
 from footer import footer
 
 # Connect to MongoDB
-client = MongoClient("mongodb://localhost:27017/")
-db = client["finance"]
-collection = db["tickers_meta_ref"]
+#client = MongoClient("mongodb://localhost:27017/")
+#db = client["finance"]
+#collection = db["tickers_meta_ref"]
 
 #Creating a copy for streamlit deployment (as pymongo can work only on local host)
 json_tickers_copy = pd.read_json("Raw (Extra)/finance.tickers_meta_ref.json")
