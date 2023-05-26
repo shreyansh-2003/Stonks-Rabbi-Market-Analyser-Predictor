@@ -3,6 +3,7 @@ import yfinance as yf
 import streamlit as st
 import plotly.graph_objects as go
 from PIL import Image
+import pandas as pd
 import streamlit.components.v1 as components
 from htbuilder import HtmlElement, div, ul, li, br, hr, a, p, img, styles, classes, fonts
 from htbuilder.units import percent, px
