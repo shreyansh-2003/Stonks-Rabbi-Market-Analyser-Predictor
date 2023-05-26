@@ -68,13 +68,13 @@ name_options, symbol_options = get_options()
 # Option Selectbox (1) --> Company Listed Name
 name_option_sb = st.selectbox('**COMPANY LISTING NAME**', name_options, key='selected_name_1',)
 
-if name_option_sb:
-    data_symbol = json_tickers_copy[json_tickers_copy["Name"]==name_option_sb]['Symbol'].values
+data_symbol = json_tickers_copy[json_tickers_copy["Name"]==name_option_sb]['Symbol'].values
+st.markdown("**COMPANY LISTING SYMBOL: **",data_symbol)
 
 # Option Selectbox (2) (Auto-Filled) --> Company Listed Symbol
 #PyMongo : ---> data_symbol = [data['Symbol'] for data in collection.find({'Name': name_option_sb}, {'Symbol': 1})]
 
-symbol_option_sb = st.selectbox('**COMPANY LISTING SYMBOL**', data_symbol[0], key='selected_name_2', disabled=True)
+#symbol_option_sb = st.selectbox('**COMPANY LISTING SYMBOL**', data_symbol[0], key='selected_name_2', disabled=True)
 
 # On clicking Analyse Button
 if st.button('Analyse'):
