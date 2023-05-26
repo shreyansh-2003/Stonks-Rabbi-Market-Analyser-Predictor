@@ -68,7 +68,7 @@ name_options, symbol_options = get_options()
 # Option Selectbox (1) --> Company Listed Name
 name_option_sb = st.selectbox('**COMPANY LISTING NAME**', name_options, key='selected_name_1',)
 
-data_symbol = json_tickers_copy[json_tickers_copy["Name"]==name_option_sb]['Symbol'].values
+data_symbol = json_tickers_copy[json_tickers_copy["Name"]==name_option_sb]['Symbol'].values[0]
 st.markdown("**COMPANY LISTING SYMBOL: **",data_symbol)
 
 # Option Selectbox (2) (Auto-Filled) --> Company Listed Symbol
