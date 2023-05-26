@@ -23,32 +23,39 @@ st.set_page_config(
 # Loading data from pymongo database finance to local environment
 @st.cache_data(experimental_allow_widgets=True)
 def get_data(symbol):
+    #Streamlit Easy Deployment Replacement
+    doc = tickers_meta_json[tickers_meta_json["Symbol"]==symbol].to_dict()
+    
+    #PyMongo Code
+    """
     # Find document with given symbol
     doc_i = tickers_meta.find({"Symbol": symbol}, {})
     for doc in doc_i:
-        if doc:
-            # Display basic fields
-            st.write(f"## {doc['Name']} ({doc['Symbol']})")
-            st.write(f"**Sector:** {doc['Sector']}")
-            st.write(f"**Industry:** {doc['Industry']}")
-            st.write(f"**Country:** {doc['Country']}")
-            st.write(f"**Market Cap:** {doc['Market Cap']}")
-            st.write(f"**IPO Year:** {doc['IPO Year']}")
-            st.write(f"**Max Years:** {doc['Max Years']}")
-            st.write(f"**% Change:** {doc['% Change']}")
-            st.write(f"**Net Change:** {doc['Net Change']}")
-            st.write(f"**Volume:** {doc['Volume']}")
+    """
+    
+    if doc:
+        # Display basic fields
+        st.write(f"## {doc['Name']} ({doc['Symbol']})")
+        st.write(f"**Sector:** {doc['Sector']}")
+        st.write(f"**Industry:** {doc['Industry']}")
+        st.write(f"**Country:** {doc['Country']}")
+        st.write(f"**Market Cap:** {doc['Market Cap']}")
+        st.write(f"**IPO Year:** {doc['IPO Year']}")
+        st.write(f"**Max Years:** {doc['Max Years']}")
+        st.write(f"**% Change:** {doc['% Change']}")
+        st.write(f"**Net Change:** {doc['Net Change']}")
+        st.write(f"**Volume:** {doc['Volume']}")
 
-            # Display dropdown menu for Data attributes
-            data = doc["Data"]
-            data_keys = list(data.keys())
-            data_keys.sort()
-            selected_data = st.selectbox(f"**Select One '{doc['Symbol']}' Attribute**", data_keys)
+        # Display dropdown menu for Data attributes
+        data = doc["Data"]
+        data_keys = list(data.keys())
+        data_keys.sort()
+        selected_data = st.selectbox(f"**Select One '{doc['Symbol']}' Attribute**", data_keys)
 
-            st.write(f"**{selected_data}:** {data[selected_data]}")
+        st.write(f"**{selected_data}:** {data[selected_data]}")
 
-        else:
-            st.write("Company Data not found from meta source.")
+    else:
+        st.write("Company Data not found from meta source.")
 
 
 
@@ -348,8 +355,8 @@ def convert_df(df):
 
 
 
-
-
+if isinstance(st.session_state.json_tickers_meta, pd.DataFrame):
+    tickers_meta_json = st.session_state.json_tickers_meta
 # Fetching Session Data
 if isinstance(st.session_state.data, pd.DataFrame):
     hist = st.session_state.data
