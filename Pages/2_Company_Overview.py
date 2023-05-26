@@ -23,15 +23,13 @@ st.set_page_config(
 # Loading data from pymongo database finance to local environment
 @st.cache_data(experimental_allow_widgets=True)
 def get_data(symbol):
+    #PyMongo Code
+    # Find document with given symbol
+    #doc_i = tickers_meta.find({"Symbol": symbol}, {})
+    #for doc in doc_i:
+    
     #Streamlit Easy Deployment Replacement
     doc = tickers_meta_json[tickers_meta_json["Symbol"]==symbol].to_dict()
-    
-    #PyMongo Code
-    """
-    # Find document with given symbol
-    doc_i = tickers_meta.find({"Symbol": symbol}, {})
-    for doc in doc_i:
-    """
     
     if doc:
         # Display basic fields
