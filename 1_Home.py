@@ -70,7 +70,7 @@ name_option_sb = st.selectbox('**COMPANY LISTING NAME**', name_options, key='sel
 
 # Option Selectbox (2) (Auto-Filled) --> Company Listed Symbol
 #PyMongo : ---> data_symbol = [data['Symbol'] for data in collection.find({'Name': name_option_sb}, {'Symbol': 1})]
-data_symbol = json_tickers_copy[json_tickers_copy["Symbol"]==name_option_sb].Symbol.values
+data_symbol = (json_tickers_copy[json_tickers_copy["Symbol"]==name_option_sb].Symbol.values)[0]
 symbol_option_sb = st.selectbox('**COMPANY LISTING SYMBOL**', data_symbol, key='selected_name_2', disabled=True)
 
 # On clicking Analyse Button
@@ -81,7 +81,7 @@ if st.button('Analyse'):
     
     #Wait fileter (spiiner) till API returns data 
     with st.spinner("Fetching Stonkkkss..."):
-        image = Image.open('/Users/shreyansh/Documents/Stonks Rabbi - Market Analyser and Predictor/stonks_cover.jpg')
+        image = Image.open('stonks_cover.jpg')
         st.image(image,width=450)
         hist = load_data(data_symbol)
         st.session_state['data'] = hist # loading data into session state so that it can be used ahead.
