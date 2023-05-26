@@ -34,19 +34,18 @@ st.sidebar.success("Select a page above.")
 #Function to get dropdown options
 @st.cache_data
 def get_options():
+    #PyMongo Code
+    # Find all names and symbols in the collection
+    #name_options = []
+    #symbol_options = []
+    #for doc in collection.find({}, {'Name': 1, 'Symbol': 1}):
+        #name_options.append(doc['Name'])
+        #symbol_options.append(doc['Symbol'])
+        
     #Streanlit Easy deployment Code
     name_options = json_tickers_copy.Name.values
     symbol_options = json_tickers_copy.Symbol.values
-    
-    #PyMongo Code
-    """
-    # Find all names and symbols in the collection
-    name_options = []
-    symbol_options = []
-    for doc in collection.find({}, {'Name': 1, 'Symbol': 1}):
-        name_options.append(doc['Name'])
-        symbol_options.append(doc['Symbol'])
-    """
+
     return name_options, symbol_options
     
 
@@ -70,7 +69,8 @@ name_options, symbol_options = get_options()
 name_option_sb = st.selectbox('**COMPANY LISTING NAME**', name_options, key='selected_name_1',)
 
 # Option Selectbox (2) (Auto-Filled) --> Company Listed Symbol
-data_symbol = [data['Symbol'] for data in collection.find({'Name': name_option_sb}, {'Symbol': 1})]
+#PyMongo : ---> data_symbol = [data['Symbol'] for data in collection.find({'Name': name_option_sb}, {'Symbol': 1})]
+data_symbol = json_tickers_copy[json_tickers_copy["Symbol"]==name_option_sb].Symbol.values
 symbol_option_sb = st.selectbox('**COMPANY LISTING SYMBOL**', data_symbol, key='selected_name_2', disabled=True)
 
 # On clicking Analyse Button
