@@ -14,6 +14,10 @@ client = MongoClient("mongodb://localhost:27017/")
 db = client["finance"]
 collection = db["tickers_meta_ref"]
 
+#Creating a copy for streamlit deployment (as pymongo can work only on local host)
+json_tickers_copy = pd.read_json("Raw (Extra)/finance.tickers_meta_ref.json")
+st.session_state["json_tickers_meta"] = json_tickers_copy
+
 #Setting basic page configuration
 st.set_page_config(
     page_title="STONKS RABBI",
@@ -29,14 +33,21 @@ st.sidebar.success("Select a page above.")
 #Function to get dropdown options
 @st.cache_data
 def get_options():
+    #Streanlit Easy deployment Code
+    name_options = json_tickers_copy.Name.values
+    symbol_options = json_tickers_copy.Symbol.values
+    
+    #PyMongo Code
+    """
     # Find all names and symbols in the collection
     name_options = []
     symbol_options = []
     for doc in collection.find({}, {'Name': 1, 'Symbol': 1}):
         name_options.append(doc['Name'])
         symbol_options.append(doc['Symbol'])
-
+    """
     return name_options, symbol_options
+    
 
 
 # Importing data from yfinance and returning the pandas datafrane
