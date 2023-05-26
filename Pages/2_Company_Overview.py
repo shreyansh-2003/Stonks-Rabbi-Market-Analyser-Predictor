@@ -9,9 +9,9 @@ from streamlit.runtime.state import SessionState
 from footer import footer
 
 # Connect to MongoDB
-client = MongoClient("mongodb://localhost:27017/")
-db = client["finance"]
-tickers_meta = db["tickers_meta_ref"]
+#client = MongoClient("mongodb://localhost:27017/")
+#db = client["finance"]
+#tickers_meta = db["tickers_meta_ref"]
 
 st.set_page_config(
     page_title="STONKS RABBI (Company Overview)",
