@@ -29,8 +29,7 @@ def get_data(symbol):
     #for doc in doc_i:
     
     #Streamlit Easy Deployment Replacement
-    doc = (tickers_meta_j[tickers_meta_j["Symbol"]==symbol]).to_dict()
-    st.write(doc)
+    doc = (tickers_meta_j[tickers_meta_j["Symbol"]==symbol]).to_dict("records")[0]
     if doc:
         # Display basic fields
         st.write(f"## {doc['Name']} ({doc['Symbol']})")
