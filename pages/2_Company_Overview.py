@@ -361,7 +361,7 @@ if isinstance(st.session_state.data, pd.DataFrame):
 if st.session_state.name_option_sb:
     comp_title = st.session_state.name_option_sb
 if st.session_state.data_symbol:
-    comp_symbol = st.session_state.data_symbol[0]
+    comp_symbol = st.session_state.data_symbol
 else:
     pass
 
