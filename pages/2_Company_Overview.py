@@ -352,9 +352,9 @@ def convert_df(df):
     return df.to_csv().encode('utf-8')
 
 
-
-if isinstance(st.session_state.json_tickers_meta, pd.DataFrame):
+if st.session_state.json_tickers_meta:
     tickers_meta_json = st.session_state.json_tickers_meta
+    
 # Fetching Session Data
 if isinstance(st.session_state.data, pd.DataFrame):
     hist = st.session_state.data
