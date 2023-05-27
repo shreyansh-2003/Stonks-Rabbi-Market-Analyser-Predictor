@@ -29,7 +29,7 @@ def get_data(symbol):
     #for doc in doc_i:
     
     #Streamlit Easy Deployment Replacement
-    doc = tickers_meta_json[tickers_meta_json["Symbol"]==symbol].to_dict()
+    doc = tickers_meta_j[tickers_meta_json["Symbol"]==symbol].to_dict()
     
     if doc:
         # Display basic fields
@@ -352,9 +352,8 @@ def convert_df(df):
     return df.to_csv().encode('utf-8')
 
 
-if st.session_state.json_tickers_meta:
-    tickers_meta_json = st.session_state.json_tickers_meta
-    
+if isinstance(st.session_state.json_tickers_meta, pd.DataFrame):
+    tickers_meta_j = st.session_state.json_tickers_meta
 # Fetching Session Data
 if isinstance(st.session_state.data, pd.DataFrame):
     hist = st.session_state.data
