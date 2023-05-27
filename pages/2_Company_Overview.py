@@ -29,7 +29,7 @@ def get_data(symbol):
     #for doc in doc_i:
     
     #Streamlit Easy Deployment Replacement
-    doc = (tickers_meta_json[tickers_meta_json["Symbol"]==symbol]).to_dict()
+    doc = (tickers_meta_j[tickers_meta_j["Symbol"]==symbol]).to_dict()
     
     if doc:
         # Display basic fields
