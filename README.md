@@ -28,6 +28,6 @@ This tool facilitates the analysis of a stock in terms of its volume, opening an
 
 1. Price Movement of Stocks (Candle Stick Chart)
 
-<img width="500" alt="image" src="https://github.com/shreyansh-2003/Stonks.Rabbi-Market_Insight_Tool/assets/105413094/c14b5a91-8041-4a9e-bc92-d2e049be2eed">
+<img width="1000" alt="image" src="https://github.com/shreyansh-2003/Stonks.Rabbi-Market_Insight_Tool/assets/105413094/c14b5a91-8041-4a9e-bc92-d2e049be2eed">
 
 
