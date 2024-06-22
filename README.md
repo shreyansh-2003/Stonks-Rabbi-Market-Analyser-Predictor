@@ -1,8 +1,12 @@
-# Stonks-Rabbi-Market-Analyser-Predictor
+# STONKS RABBI - A Market Analyser & Forecaster
 
 **Website Link:** https://stonks-rabbi.streamlit.app/
 
 Stonks Rabbi is a streamlit-based application that uses the Yahoo Finance API to visualize and analyze stock trends, patterns, and performance over its listed time period. The metadata is handled through pymongo, the frontend is on streamlit, and autoARIMA, pandas, and matplotlib are used for data analytics and visualization. 
+
+<img width="1077" alt="image" src="https://github.com/shreyansh-2003/Stonks.Rabbi-Market_Insight_Tool/assets/105413094/495e83b5-0962-4065-91f3-37516017e6d2">
+
+
 
 ## Home Page
 
