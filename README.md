@@ -6,7 +6,7 @@ Stonks Rabbi is a streamlit-based application that uses the Yahoo Finance API to
 
 <img width="1077" alt="image" src="https://github.com/shreyansh-2003/Stonks.Rabbi-Market_Insight_Tool/assets/105413094/495e83b5-0962-4065-91f3-37516017e6d2">
 
-
+---
 
 > ## Home Page
 
@@ -14,17 +14,34 @@ The home page, as demonstrated in the video below, features a dropdown menu of N
 
 https://github.com/shreyansh-2003/Stonks-Rabbi-Stock-Trends-Analyzer/assets/105413094/9139c6cf-aacd-4c10-869c-e1f72bd419e0
 
+---
+
 > ## Company Overview Page - Metaadata
 
 The first section of the **Company Overview** page contains essential metadata about the company. It includes a dropdown menu to select various parameters such as address, phone number, 52-week change, audit risk, current ratio, and more. Additionally, this section presents a dataset queried from the Yahoo Finance API, which comprises the Open, High, Low, Close, and Volume data for all recorded days since the stock's inception. This dataset can be directly downloaded by clicking the ```Download Data As CSV``` button.
 
 ![CO-1](https://github.com/shreyansh-2003/Stonks-Rabbi-Stock-Trends-Analyzer/assets/105413094/92b957e9-d28a-4e05-b3a1-0b27ac2aca20)
 
+---
+
 > ## Company Overview Page - Visual Analysis (Stock Performance Viewer)
 
 This tool facilitates the analysis of a stock in terms of its volume, opening and closing prices, and other aspects over time. It offers more than 15 visualizations that can be generated through a dropdown menu. Year and month sliders are available for specifying and adjusting graph values to focus on specific time frames. The graphs are interactive, providing exact values and dates upon hovering. Additionally, the graphs can be zoomed and moved around, as they are rendered using Plotly HTML instances. The below walkthrough video showcases some of the visualisations generated for a particular stock.
 
 https://github.com/shreyansh-2003/Stonks.Rabbi-Market_Insight_Tool/assets/105413094/119fc427-8eb2-4f3a-bf31-f8b3e4e61118
+
+---
+
+> ## Foreccasting Company Stocks
+
+Forecasting company stocks is important because it helps investors and traders make informed decisions about buying and selling stocks, which can result in significant financial gains or losses. The process of forecasting involves analyzing historical price data to identify patterns and trends, and using statistical models to make predictions about future price movements. This section of the application offers forecasting functionalities, specifically ARIMA and Auto ARIMA models, complemented by seasonal and trend-eliminated plots. The walkhrough video shows forecasting figures generated in the Stonks Rabbi Application
+
+
+https://github.com/shreyansh-2003/Stonks_Rabbi-Market_Insight_Analysis_Tool/assets/105413094/d72e558a-ed9b-484b-85cf-f8cf73552f4d
+
+---
+
+Developed by **Shreyansh Padarha**
 
 
 
