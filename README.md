@@ -6,10 +6,7 @@ Stonks Rabbi is a streamlit-based application that uses the Yahoo Finance API to
 
 ### Home Page
 
+The home page, as demonstrated in the video below, features a dropdown menu of Nasdaq stock exchange stocks and portfolios available for selection.
 
-
-<img width="1428" alt="image" src="https://github.com/shreyansh-2003/Stonks-Rabbi-Stock-Trends-Analyzer/assets/105413094/43c3730a-cbff-47db-ab68-934acd4fbfea">
-
-
-https://github.com/shreyansh-2003/Stonks-Rabbi-Stock-Trends-Analyzer/assets/105413094/4300a18b-fbaf-4eca-b2da-d978ccea56e8
+https://github.com/shreyansh-2003/Stonks-Rabbi-Stock-Trends-Analyzer/assets/105413094/a1e477d6-2d59-4328-9653-fdc51619e41d
 
