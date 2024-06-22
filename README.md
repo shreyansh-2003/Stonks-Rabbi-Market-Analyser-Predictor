@@ -12,4 +12,11 @@ https://github.com/shreyansh-2003/Stonks-Rabbi-Stock-Trends-Analyzer/assets/1054
 
 ## Company Overview Page
 
-![Company Overview - 1](https://github.com/shreyansh-2003/Stonks-Rabbi-Stock-Trends-Analyzer/assets/105413094/5514b19a-d1d2-487a-b133-4c0468916f7d)
+#### Metaadata
+
+The first section of the **Company Overview** page contains essential metadata about the company. It includes a dropdown menu to select various parameters such as address, phone number, 52-week change, audit risk, current ratio, and more. Additionally, this section presents a dataset queried from the Yahoo Finance API, which comprises the Open, High, Low, Close, and Volume data for all recorded days since the stock's inception. This dataset can be directly downloaded by clicking the ```Download Data As CSV``` button.
+
+![CO-1](https://github.com/shreyansh-2003/Stonks-Rabbi-Stock-Trends-Analyzer/assets/105413094/92b957e9-d28a-4e05-b3a1-0b27ac2aca20)
+
+
+
