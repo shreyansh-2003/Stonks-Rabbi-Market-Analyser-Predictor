@@ -1,4 +1,4 @@
-# STONKS RABBI - A Market Analyser & Forecaster
+> # STONKS RABBI - A Market Analyser & Forecaster
 
 **Website Link:** https://stonks-rabbi.streamlit.app/
 
@@ -8,26 +8,26 @@ Stonks Rabbi is a streamlit-based application that uses the Yahoo Finance API to
 
 
 
-## Home Page
+> ## Home Page
 
 The home page, as demonstrated in the video below, features a dropdown menu of Nasdaq stock exchange stocks and portfolios available for selection.
 
 https://github.com/shreyansh-2003/Stonks-Rabbi-Stock-Trends-Analyzer/assets/105413094/9139c6cf-aacd-4c10-869c-e1f72bd419e0
 
-## Company Overview Page
-
-### Metaadata
+## Company Overview Page - Metaadata
 
 The first section of the **Company Overview** page contains essential metadata about the company. It includes a dropdown menu to select various parameters such as address, phone number, 52-week change, audit risk, current ratio, and more. Additionally, this section presents a dataset queried from the Yahoo Finance API, which comprises the Open, High, Low, Close, and Volume data for all recorded days since the stock's inception. This dataset can be directly downloaded by clicking the ```Download Data As CSV``` button.
 
 ![CO-1](https://github.com/shreyansh-2003/Stonks-Rabbi-Stock-Trends-Analyzer/assets/105413094/92b957e9-d28a-4e05-b3a1-0b27ac2aca20)
 
-### Visual Analysis - Stock Performance Viewer
+> ## Company Overview Page - Visual Analysis (Stock Performance Viewer)
 
 This tool facilitates the analysis of a stock in terms of its volume, opening and closing prices, and other aspects over time. It offers more than 15 visualizations that can be generated through a dropdown menu. Year and month sliders are available for specifying and adjusting graph values to focus on specific time frames. The graphs are interactive, providing exact values and dates upon hovering. Additionally, the graphs can be zoomed and moved around, as they are rendered using Plotly HTML instances.
 
-1. Price Movement of Stocks (Candle Stick Chart)
-
 <img width="1000" alt="image" src="https://github.com/shreyansh-2003/Stonks.Rabbi-Market_Insight_Tool/assets/105413094/c14b5a91-8041-4a9e-bc92-d2e049be2eed">
+
+<img width="1000" alt="image" src="https://github.com/shreyansh-2003/Stonks.Rabbi-Market_Insight_Tool/assets/105413094/3f262635-af95-40d5-8bee-b0ca0e19e12a">
+
+<img width="1000" alt="image" src="https://github.com/shreyansh-2003/Stonks.Rabbi-Market_Insight_Tool/assets/105413094/ee5542b5-d554-467f-bc3c-33d5f62ed0d3">
 
 
